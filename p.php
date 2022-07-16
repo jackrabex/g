@@ -1,15 +1,12 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("green","# # # # # # # # # # # # # # # # # # # # # # # \n");
-echo color("yellow","[•]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
-echo color("yellow","[•] cara menulis nomor pakai 62xxxxxxxxxx \n");
-echo color("green","# # # # # # # # # # # # # # # # # # # # # # # \n");
+echo color("green","[•]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
 function change(){
-        echo color("yellow", " MAU SET NAMA (y/n) ? ");
+        echo color("yellow", " Mau set nama (y/n) ? ");
         $autonama = trim(fgets(STDIN));
         if($autonama == 'y' || $autonama == 'Y') {
-                echo color("yellow"," Masukkan Nama Depan & Belakang : ");
+                echo color("yellow"," Masukan Nama Depan & Belakang : ");
                 $nama = trim(fgets(STDIN));
         } else if ($autonama == 'n' || $autonama == 'N') {
                 $nama = nama();
@@ -21,7 +18,7 @@ function change(){
         gar:
         system("exit");
         ulang:
-        echo color("green","└──> Nomor : ");
+        echo color("green","└──> Masukan Nomor 62xxx : ");
         $no = trim(fgets(STDIN));
         $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$no.'","signed_up_country":"ID"}';
         $register = request("/v5/customers", null, $data);
