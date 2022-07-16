@@ -43,9 +43,10 @@ function change(){
         $pilihan = trim(fgets(STDIN));
         if($pilihan == "y" || $pilihan == "Y"){
         //kamu kena preng wkwkwk cuman echo doang bukan claim voc beneran//
-                echo color("green","Voucher Sudah Di Claim");
-                sleep(2);
-                echo "\n";
+                for($a=1;$a<=1;$a++){
+                        echo color("green","Voucher Sudah Di Claim");
+                        sleep(2);
+                        echo "\n";
         }
         die();
         $code1 = request('/go-promotions/v1/promotions/enrollments');
